@@ -18,6 +18,7 @@
 #include "Application.hpp"
 #include "Config.hpp"
 #include "GameState.hpp"
+#include "MainMenuState.hpp"
 #include "TextureLoader.hpp"
 
 void Application::init() {
@@ -41,7 +42,9 @@ void Application::init() {
 
 	m_scriptEngine.init();
 
-	m_stateStack.push<GameState>();
+	// m_stateStack.push<GameState>();
+	m_stateStack.push<MainMenuState>();
+
 }
 
 void Application::initOpenGL() {
